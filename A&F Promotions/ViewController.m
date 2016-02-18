@@ -10,6 +10,7 @@
 #import "AFPromotionsTableViewCell.h"
 #import "WebServiceManager.h"
 #import "AFPromotion.h"
+#import "AFPromotionsDetailViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -89,7 +90,7 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //TODO:Show a promotion detail view.
+    [self performSegueWithIdentifier:@"ASPromoDetailSegue" sender:indexPath];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -99,6 +100,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ASPromoDetailSegue"]) {
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        AFPromotion *promoObject = [self.promotions objectAtIndex:indexPath.row];
+        AFPromotionsDetailViewController *destVC = (AFPromotionsDetailViewController *)segue.destinationViewController;
+        [destVC setPromotion:promoObject];
+    }
 }
 
 @end

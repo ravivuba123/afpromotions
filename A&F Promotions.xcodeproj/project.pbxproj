@@ -33,6 +33,7 @@
 		9B2899821C75757C009383CC /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2899811C75757C009383CC /* WebServiceManager.m */; };
 		9B2899871C757978009383CC /* AFPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2899861C757978009383CC /* AFPromotion.m */; };
 		9BE125B11C75894400731E9C /* AFPromotionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE125B01C75894400731E9C /* AFPromotionsTableViewCell.m */; };
+		9BE125B41C75AA6D00731E9C /* AFPromotionsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE125B31C75AA6D00731E9C /* AFPromotionsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		9B2899861C757978009383CC /* AFPromotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPromotion.m; sourceTree = "<group>"; };
 		9BE125AF1C75894400731E9C /* AFPromotionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPromotionsTableViewCell.h; sourceTree = "<group>"; };
 		9BE125B01C75894400731E9C /* AFPromotionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPromotionsTableViewCell.m; sourceTree = "<group>"; };
+		9BE125B21C75AA6D00731E9C /* AFPromotionsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPromotionsDetailViewController.h; sourceTree = "<group>"; };
+		9BE125B31C75AA6D00731E9C /* AFPromotionsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPromotionsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,20 +162,16 @@
 		9B2899011C7570FB009383CC /* A&F Promotions */ = {
 			isa = PBXGroup;
 			children = (
-				9BE125AE1C75892800731E9C /* TableViewCells */,
-				9B2899841C757961009383CC /* DataModel */,
-				9B2899351C75747B009383CC /* Libraries */,
-				9B2899801C75757C009383CC /* WebServiceManager.h */,
-				9B2899811C75757C009383CC /* WebServiceManager.m */,
-				9B2899051C7570FB009383CC /* AppDelegate.h */,
-				9B2899061C7570FB009383CC /* AppDelegate.m */,
-				9BE125AC1C75890600731E9C /* ViewControllers */,
-				9B28990B1C7570FB009383CC /* Main.storyboard */,
-				9B28990E1C7570FC009383CC /* Assets.xcassets */,
-				9B2899101C7570FC009383CC /* LaunchScreen.storyboard */,
-				9B2899131C7570FC009383CC /* Info.plist */,
-				9B2899021C7570FB009383CC /* Supporting Files */,
+				9BE125B61C75B1F100731E9C /* Core */,
 				9B2899831C7577B1009383CC /* Constants.h */,
+				9B2899841C757961009383CC /* DataModel */,
+				9B2899101C7570FC009383CC /* LaunchScreen.storyboard */,
+				9B2899351C75747B009383CC /* Libraries */,
+				9B28990B1C7570FB009383CC /* Main.storyboard */,
+				9B2899021C7570FB009383CC /* Supporting Files */,
+				9BE125AE1C75892800731E9C /* TableViewCells */,
+				9BE125AC1C75890600731E9C /* ViewControllers */,
+				9BE125B51C75B1BD00731E9C /* WebServiceClasses */,
 			);
 			path = "A&F Promotions";
 			sourceTree = "<group>";
@@ -273,6 +272,8 @@
 			children = (
 				9B2899081C7570FB009383CC /* ViewController.h */,
 				9B2899091C7570FB009383CC /* ViewController.m */,
+				9BE125B21C75AA6D00731E9C /* AFPromotionsDetailViewController.h */,
+				9BE125B31C75AA6D00731E9C /* AFPromotionsDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -284,6 +285,26 @@
 				9BE125B01C75894400731E9C /* AFPromotionsTableViewCell.m */,
 			);
 			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		9BE125B51C75B1BD00731E9C /* WebServiceClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9B2899801C75757C009383CC /* WebServiceManager.h */,
+				9B2899811C75757C009383CC /* WebServiceManager.m */,
+			);
+			name = WebServiceClasses;
+			sourceTree = "<group>";
+		};
+		9BE125B61C75B1F100731E9C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9B2899051C7570FB009383CC /* AppDelegate.h */,
+				9B2899061C7570FB009383CC /* AppDelegate.m */,
+				9B28990E1C7570FC009383CC /* Assets.xcassets */,
+				9B2899131C7570FC009383CC /* Info.plist */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +439,7 @@
 			files = (
 				9BE125B11C75894400731E9C /* AFPromotionsTableViewCell.m in Sources */,
 				9B28997D1C75755F009383CC /* UIProgressView+AFNetworking.m in Sources */,
+				9BE125B41C75AA6D00731E9C /* AFPromotionsDetailViewController.m in Sources */,
 				9B2899621C75754C009383CC /* AFURLSessionManager.m in Sources */,
 				9B28997F1C75755F009383CC /* UIWebView+AFNetworking.m in Sources */,
 				9B28997C1C75755F009383CC /* UIImageView+AFNetworking.m in Sources */,
